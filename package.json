@@ -1,6 +1,6 @@
 {
   "name": "lerna-to-typescript-project-references",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Keep package dependecies synchronized between lerna and typescript.",
   "author": "Chris Mohr",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "url": "https://github.com/chrismohr/lerna-to-typescript-project-references.git"
   },
   "bin": {
-    "toobig": "dist/lerna-to-typescript-project-references.js"
+    "lerna-to-typescript-project-references": "dist/cli.js"
   },
   "dependencies": {},
   "devDependencies": {
