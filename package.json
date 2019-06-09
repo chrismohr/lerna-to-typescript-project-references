@@ -1,7 +1,7 @@
 {
   "name": "lerna-to-typescript-project-references",
-  "version": "0.0.4",
-  "description": "Keep package dependecies synchronized between lerna and typescript.",
+  "version": "0.0.6",
+  "description": "Keep package dependencies synchronized between lerna and typescript.",
   "author": "Chris Mohr",
   "license": "MIT",
   "repository": {
@@ -11,19 +11,26 @@
   "bin": {
     "lerna-to-typescript-project-references": "dist/cli.js"
   },
+  "dependencies": {
+    "arg": "^4.1.0",
+    "prettier": "^1.0.0"
+  },
   "devDependencies": {
-    "@types/node": "12.0.7",
-    "prettier": "1.18.2",
-    "pretty-quick": "1.11.0",
-    "typescript": "3.5.1"
+    "@types/node": "^12.0.7",
+    "@types/prettier": "^1.16.4",
+    "pre-commit": "^1.2.2",
+    "pretty-quick": "^1.11.0",
+    "typescript": "^3.5.1"
   },
   "peerDependencies": {
-    "lerna": "^3.4",
-    "typescript": "^3.4"
+    "lerna": "^3.2.0",
+    "typescript": "^3.0.1"
   },
   "scripts": {
     "build": "tsc --build && chmod +x dist/cli.js",
     "prepublishOnly": "npm run build",
+    "pretty-quick": "pretty-quick --staged",
     "watch": "tsc --build --watch"
-  }
+  },
+  "pre-commit": "pretty-quick"
 }
