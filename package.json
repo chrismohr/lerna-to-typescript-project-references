@@ -23,8 +23,7 @@
     "typescript": "^3.5.1"
   },
   "peerDependencies": {
-    "lerna": "^3.2.0",
-    "typescript": "^3.0.1"
+    "lerna": "^3.2.0"
   },
   "scripts": {
     "build": "tsc --build && chmod +x dist/cli.js",
